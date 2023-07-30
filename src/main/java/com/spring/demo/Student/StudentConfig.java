@@ -17,8 +17,12 @@ public class StudentConfig {
             Student student1 = new Student(
                  1L,"Mark","Miller",LocalDate.of(2013,Month.APRIL,23),21,"8","Negambo Road,Kurunegala","0701234567","Samarakoon"
             );
+            Student student2 = new Student(
+                    "Steve","Smith",LocalDate.of(2009,Month.MARCH,4),13,"6","Victoria, Melbourne","+63123456734","Smith"
+            );
 
             repository.saveAll(List.of(student1));
+            repository.saveAll(List.of(student2));
         };
     }
 }
