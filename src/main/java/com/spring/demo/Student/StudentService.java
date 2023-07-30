@@ -27,11 +27,12 @@ public class StudentService {
     }
 
     public static void addStudent(Student student) {
-        Optional<Student> studentByName = studentRepository.findStudentByName(student.getName());
-        if (studentByName.isPresent()){
+        Optional<Student> studentById = studentRepository.findStudentById(student.getId());
+        if (studentById.isPresent()){
             throw new IllegalStateException("name taken");
         }
         studentRepository.save(student);
+
         System.out.println(student);
     }
 
@@ -43,10 +44,10 @@ public class StudentService {
         studentRepository.deleteById(studentId);
     }
     @Transactional
-    public void updateStudent(Long studentId, String name) {
+    public void updateStudent(Long studentId, String Fname) {
         Student student = studentRepository.findById(studentId).orElseThrow(() -> new IllegalStateException("student with id "+ studentId+ " does not exist"));
-        if (name != null && name.length() > 0 && !Objects.equals(student.getName(), name)){
-            student.setName(name);
+        if (Fname != null && Fname.length() > 0 && !Objects.equals(student.getFname(), Fname)){
+            student.setFname(Fname);
         }
     }
 }

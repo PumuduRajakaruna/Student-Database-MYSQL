@@ -8,31 +8,36 @@ import java.time.Period;
 @Entity
 @Table
 public class Student {
-    @Column
-    private String name;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column
+    private String Fname;
+    private String Lname;
+
     private LocalDate dob;
     @Transient
     private Integer age;
 
-    public Student(String name, Long id, LocalDate dob) {
-        this.name = name;
+    @Column
+    private String grade;
+    private String address;
+    private String telephoneNo;
+    private String guardianName;
+
+    public Student(Long id, String Fname, String Lname, LocalDate dob, Integer age, String grade, String address, String telephoneNo, String guardianName) {
         this.id = id;
+        this.Fname = Fname;
+        this.Lname = Lname;
         this.dob = dob;
+        this.age = age;
+        this.grade = grade;
+        this.address = address;
+        this.telephoneNo = telephoneNo;
+        this.guardianName = guardianName;
     }
 
     public Student() {
-
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public Long getId() {
@@ -43,12 +48,60 @@ public class Student {
         this.id = id;
     }
 
+    public String getFname() {
+        return Fname;
+    }
+
+    public void setFname(String fname) {
+        Fname = fname;
+    }
+
+    public String getLname() {
+        return Lname;
+    }
+
+    public void setLname(String lname) {
+        Lname = lname;
+    }
+
     public LocalDate getDob() {
         return dob;
     }
 
     public void setDob(LocalDate dob) {
         this.dob = dob;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getTelephoneNo() {
+        return telephoneNo;
+    }
+
+    public void setTelephoneNo(String telephoneNo) {
+        this.telephoneNo = telephoneNo;
+    }
+
+    public String getGuardianName() {
+        return guardianName;
+    }
+
+    public void setGuardianName(String guardianName) {
+        this.guardianName = guardianName;
     }
 
     public Integer getAge() {
