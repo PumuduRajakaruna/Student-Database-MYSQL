@@ -40,6 +40,17 @@ public class Student {
     public Student() {
     }
 
+    public Student(String fname, String lname, LocalDate dob, Integer age, String grade, String address, String telephoneNo, String guardianName) {
+        this.Fname = fname;
+        this.Lname = lname;
+        this.dob = dob;
+        this.age = age;
+        this.grade = grade;
+        this.address = address;
+        this.telephoneNo = telephoneNo;
+        this.guardianName = guardianName;
+    }
+
     public Long getId() {
         return id;
     }
