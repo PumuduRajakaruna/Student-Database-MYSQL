@@ -10,7 +10,7 @@ import '../component/documents.svg';
 export default function Menu() {
   return (
     <>
-    <Navbar bg="dark" data-bs-theme="dark">
+    <Navbar data-bs-theme="dark">
         <Container>
           <Navbar.Brand href="/">RegisterMe</Navbar.Brand>
           <Navbar.Brand href="/">
@@ -19,12 +19,13 @@ export default function Menu() {
               width="30"
               height="30"
               className="d-inline-block align-top"
-              // alt="React Bootstrap logo"
+              alt=" "
             />
           </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="/Student">Add New Student</Nav.Link>
           </Nav>
           <Col xs="auto">
             <Nav.Link href="/Login"><Button type="Login" >Login</Button></Nav.Link>

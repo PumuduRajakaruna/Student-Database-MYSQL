@@ -1,7 +1,7 @@
 .header{
     color: #054382;
-    font-family: 'Times New Roman', Times, serif;
-    font-size:xx-large;
+    font-family:monospace;
+    font-size:55px;
     display: flex;
     justify-content: center;
     align-items: center;
