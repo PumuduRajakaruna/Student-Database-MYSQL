@@ -5,7 +5,7 @@ import Menu from '../component/Menu.js'
 
 export default function Home() {
   return (
-    <div>
+    <div className='body'>
       <Menu />
       <h1 className='header'>WELCOME TO THE STUDENT REGISTRATION PLATFORM</h1>
     </div>
